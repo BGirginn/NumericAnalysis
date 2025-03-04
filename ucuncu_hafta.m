@@ -230,3 +230,6 @@ inv(X) % matrisin tersini bulur
 
 
 % Derrière chaque sourire se cache en réalité un acrobate dansant au bord du suicide.
+
+% 3. Hafta - 3. Ders
+
