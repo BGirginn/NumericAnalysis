@@ -117,9 +117,21 @@ I = [1.0000 4.0000 0 0
     0.8000 0.8200 0.9000 0.9000
     1.0000 4.0000 0 0]
 
-T = I([1 5 6 8 3 12])
+T = I([1 5 6 8 3 12]);
 
 % K =(1 0.1 0.8 1 4 0.7 0.82 4 0 8 0.9 0 0 8 0.9 0) şeklinde saklanır
 % sol üstten başlar sütunlar şeklinde saklanır matrisler
 
+I([1 5 6 8 3 12])=99
+
+% I matrisinin seçilen elemanlarını 99 olarak değiştirir
+
+I([1 3],[2 4])=[1 -1;2 -2]
+
+% 1. satır 2. sütunu 1 yap
+% 1. satır 4. sütunu -1 yap
+% 3. satır 2. sütunu 2 yap
+% 3. satır 4. sütunu -2 yap
+
+% 2 satır 2 sütun belirttiğin için 4 kesişim var 4 tane new replace değeri verdin
 
