@@ -1,4 +1,5 @@
 % 3.Hafta - 1.Ders
+
 % MATLAB'da Vektör İşlemleri ve Temel Operasyonlar
 % Matematiksel vektör oluşturmak için;
 x=[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9]
@@ -13,7 +14,7 @@ x (6), y(4)
 A=2:0.5:6      % 2den 6ya kadar 0.5 artışla vektör
 B=1:-0.3:-0.5  % 1 den -0.5 e kadar 0.3 azalış ile vektör
 
-Q=[2:0.3:8]' % bu da bir operatördür ve üs koyarsan satır değil sütun olur
+W=[2:0.3:8]' % bu da bir operatördür ve üs koyarsan satır değil sütun olur
 
 
 % bir vektör elemanları ile yeni vektör üretmek
@@ -135,3 +136,97 @@ I([1 3],[2 4])=[1 -1;2 -2]
 
 % 2 satır 2 sütun belirttiğin için 4 kesişim var 4 tane new replace değeri verdin
 
+I(3,[2:4])=3:2:7
+
+% I matrisinin 3. satır 2,3,4. sütundaki elemanlarının değerlerini sırası ile 3,2 ve 7 arttır
+
+
+s(1:3,1:4)=5
+
+% 3 satır 4 sütun tüm elemanları 5 olan bir matris
+
+a1=rand(3,2)
+a2=rand(3,2)
+
+% 3 satır 2 sütun random sayılardan matris
+
+a3=[a1 a2]
+
+% satır sayıları eşit olduğu için yan yana yazabildi
+
+a4=[a1;a2]
+
+% sütun sayıları eşit olduğu için alt alta yazabildi
+
+
+size (a1)
+% matrisin satır sütun sayısını gösterir
+
+[m,n] = size (a1)
+% matrisin satır sayısını m ye sütun sayısını n ye atar
+
+b=size(a1,1)
+% matirisin sadece satır sayısı b değişkenine atanır
+
+c=size(a1,2)
+% matrisin sadece sütun sayısı c değişkenine atanır
+
+e=length(a1)
+% satır sütun değerlerinden büyük olanı e değişkenine atar
+
+t=numel(a1)
+% vektör ya da matristeki toplam eleman sayısını t değişkenine atar
+% prod(size(a1) ile aynı işlevi yapar 
+
+c=zeros(size(a1))
+% a1 ile aynı boyutta 0lardan oluşan matris
+
+c=ones(size(a1))
+
+
+t=eye(3,3)
+% köşegeni 1 kalan elemanları 0 olan matris
+
+N=[1 2 3 4; 5 6 7 8; 9 10 11 12]
+
+N(:)  % bir matrisin db de nasıl tutulduğunu gösterir
+
+M=reshape (N,4,3)
+% N matrisi elemanlarını alıp 4 satır 3 sütun olacak şekilde yeniden sırayla yazar
+% burada dikkat etmen gereken iki matrisin eleman sayısı eşit olmalıdır
+
+K = fliplr(M) % M matrisinin y eksen simetriğini K matrisi olarak atar
+T = flipud(K) % K matrisinin x eksen simetriğini T olarak atar
+
+
+S = rot90(T) % matrisi saatin tersi yönde 90 döndürür ve S ye atar
+
+O = repmat(S,2,3) % matrisi 2 kere alta 3 kere sağa doğru kopyalar
+
+B = 3*T+7 
+
+
+W=[0 1;4 5]
+Q=W^2
+Q=W.^2
+
+% BU İKİ İŞLEM AYNI ŞEY DEĞİL ÇOK DİKKAT ET
+% ilki matrisi kendisi ile çarpar
+% ikincisi ise matrisin her elemanının tekil olarak karesini alıp yerine yazar
+
+% toplama ve çıkarma işleminde işleme giren matrislerin boyutlarının aynı olması gerek (hem satır hem sütun bazında)
+
+X=[1,2,5;0,-2,4;3,5,7]
+rank(X) % burada rank değeri lineer bağımsız satır sayısını belirtir
+% lineer bağımsız satır sayısı ise birbirinin katı olmayan satır demek
+% [1,2,4;2,4,10;5,3,8] şeklinde bir matrisde 2. satır 1 in katı. bu durumda 1 ve 3 lineer bağımsız rank 2
+
+
+inv(X) % matrisin tersini bulur
+% bir matrisin kendisi ile tersini çarparsan birim matris elde edersin
+% birim matris ise sol üst sağ alt köşegen 1 kalanlar 0 olan matristir
+% sadece kare, determinantı 0 olmayan, tüm satırları lineer bağımsız ise tersi alınabilir 
+
+
+
+% Derrière chaque sourire se cache en réalité un acrobate dansant au bord du suicide.
