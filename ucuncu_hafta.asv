@@ -257,11 +257,9 @@ b1 % bu şekilde b1 matrisini çağırınca her sayfadaki matrisi de getirir ve 
 
 
 ndims(b1)  % matrisin kaç sayfa olduğunu anlatır
-size(b1)   % buradaki çıktıda görülen 3. sayı matrisin kaç sayfa olduğunu (ndims in daha iyisi) anlatır
+size(b1)   % buradaki çıktıda görülen 3. sayı matrisin kaç sayfa olduğunu  
 
-plot(x,y)  % yatay eksendeki x değerleri ile düşeydeki y değerleri arasındaki değişimi çizer
 
-% çizim komutları vardı da onları yazmadım ya onun yerine Dead Calm dinledim
 
 % Derrière chaque sourire se cache en réalité un acrobate dansant au bord du suicide.
 
