@@ -18,12 +18,4 @@
 % Matlab ortamında polinom gösterimi
 % standart polinom gösterimi an*x^n+a(n-1)*x^(n-1)+...+a1*x+a0
 
-% Eğer "x" daha önce tanımlanmmış bir sayı ise B(x) eşitliği alttaki şekilde yazılır
-B(x)=3*x^4-7*x^2+2*x-1
-
-% Ancak eğer "x" tanımlanmış bir vektör ise alttaki gibi yazılır !!! Önemli fark !!!
-
-B(x)= 3*x.^4-7*x.^2+2*x-1  % bunun sonunda B ifadesi x vektörü ile aynı boyutta olacaktır
-
-
-
+B(x)3*x^4-7*x^2+2*x-1
