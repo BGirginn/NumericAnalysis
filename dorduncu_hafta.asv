@@ -53,5 +53,38 @@ grid
 k=[4 -8 0 7 1]
 m=[2 0 7 0 -2 6]
 t=conv(k,m)  % k ve m bir satır vektör olmak zorunda. 
-% bu komutu kullanmak için ik polinomun da (bulunmayıp katsayısı 0 olanlar bile dahil) katsayılırını birer vektöre atamalısın
-% bu komut senin için çarpmayı yapıp i
+% bu komutu kullanmak için iki polinomun da (bulunmayıp katsayısı 0 olanlar bile dahil) katsayılırını birer matrise atamalısın
+% bu komut senin için çarpmayı yapıp istenen matrise atar (x^3 ve x^4 çarpımı katsayısı ile x^2 ve x^5 çarpımı katsayısı toplar)
+
+
+% Büyük dereceli polinomun küçük dereceli polinoma bölünmesi
+
+% X(t) = 7t^6-2t^4+8t^3+2
+% Y(t) = 2t^4-4t^3+2t+8
+
+pay=[7 0 -2 8 0 0 2]; payda=[2 -4 0 2 8];
+[bolum,kalan]=deconv(pay,payda)
+
+% sonuç= 3,5t^2+7t+13+(53t^3-42t^2-82t-102/2t^4-4t^3+2t+8)
+% bu işlemde bölümü yazıp sonrasında kalanı denklem olarak yazıp bölen e bölüp yazıyorsun 
+
+
+% Polinomun türevinin alınması
+
+% 2t^6+7t^3-8t+3
+
+s=[2 0 0 3 0 -8 3];
+a=polyder(s)  % polyder komutu conv ve deconv gibi bir matrisi polinomun katsayıları gibi algılamayı ve türevini almayı sağlar
+
+% polyder (x,y) = x ve y vektörlerinin çarpımının türevini alır
+
+% [pay,payda]=polyder(x,y) = x ve y vektörlerinin bölüm türevini hesaplar, pay türevin kesrinin payı payda ise paydasını verir
+
+
+% Polinomun integralinin alınması
+
+% A= 2t^3+3t^2-5t+6
+
+int=[2 3 -5 6]
+
+
