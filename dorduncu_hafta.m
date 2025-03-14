@@ -15,7 +15,7 @@
 % θ: x(t) eğrisinin coswt eğrisine göre faz farkıdır. 0 dan büyük ise 
 
 
-% Matlab ortamında polinom gösterimi
+% Matlab ortamıngşda polinom gösterimi
 % standart polinom gösterimi an*x^n+a(n-1)*x^(n-1)+...+a1*x+a0
 
 % Eğer "x" daha önce tanımlanmmış bir sayı ise B(x) eşitliği alttaki şekilde yazılır
@@ -88,6 +88,32 @@ a=polyder(s)  % polyder komutu conv ve deconv gibi bir matrisi polinomun katsay�
 a=[2 3 -5 6];
 polyint(a)   % polinomun integralini almanı sağlar ve en sona bir 0 ekler bu da C bilinmeyenini ifade eder
 
+% polyint komutunda integral sabiti default olarak 0 seçilir eğer farklı bir şey seçmek istiyorsan polyint(a,sabit) kullanabilirsin
 
 
+roots(a) % vektör ya da polinomun köklerini hesaplar 
 
+D=[1 2 1]; % bir polinomun katsayılarının vektörü
+
+c=roots(D) % komutu ile kökler c matrisine atanır
+
+f=roots([1 3 7 4]);  % şeklinde de kullanılabilir 
+
+
+% x1=0, x2=2, x3=1+j, x4=1-j değerlerini kök kabul eden polinom nedir
+
+f=[0 2 1+j 1-j];
+k=poly(f)
+
+% bu kodun çıktısındaki katsayılar polinomun katsayılarıdır
+% f(t)=t^4-4t^3+6t^2-4t
+
+
+% A(t)=(t^2-4)/(2t^4-6t^3+2t^2+5)
+
+pay=[1 0 -4]; payda=[2 -6 2 0 5];
+[rez,kok]=residue(pay,payda)
+% bu şekilde hem rezidü (kalan) hem kök değerlerini bulabiliriz
+
+
+% 4.Hafta 2. Bölüm
