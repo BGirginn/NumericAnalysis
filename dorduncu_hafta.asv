@@ -109,4 +109,25 @@ k=poly(f)
 % f(t)=t^4-4t^3+6t^2-4t
 
 
-% A(t)=(t^2-4)/
+% A(t)=(t^2-4)/(2t^4-6t^3+2t^2+5)
+
+pay=[1 0 -4]; payda=[2 -6 2 0 5];
+[rez,kok]=residue(pay,payda)
+% bu şekilde hem rezidü (kalan) hem kök değerlerini bulabiliriz
+
+
+% 4.Hafta 2. Bölüm
+
+% A(t) t+2-(0.5/t+4)-(0.6145/t-1)+(1.5/t-7) polinomonu A(t)=X(t)/Y(t) formunda yazınız
+
+rez=[-0.5 -0.6145 1.5]; kok=[-4 1 7]; bolum=[1 2];  % burada bölüm neden 1 ve 2 ????
+
+[pay,payda]=residue(rez,kok,bolum)
+
+% eğer bolüm
+
+
+
+
+
+% senelerini harcadığın kız tüm emeklerini boşa attı ve tek yaptığın kendini daha çok kesmek oldu unutma bu anı

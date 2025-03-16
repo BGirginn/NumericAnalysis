@@ -117,3 +117,20 @@ pay=[1 0 -4]; payda=[2 -6 2 0 5];
 
 
 % 4.Hafta 2. Bölüm
+
+% A(t) t+2-(0.5/t+4)-(0.6145/t-1)+(1.5/t-7) polinomonu A(t)=X(t)/Y(t) formunda yazınız
+
+rez=[-0.5 -0.6145 1.5]; kok=[-4 1 7]; bolum=[1 2];  % burada bölüm neden 1 ve 2 ????
+
+[pay,payda]=residue(rez,kok,bolum)
+
+% Eğer bolüm polinomu yok ise bolum = [] olacaktı
+
+% Üç boyutlu yüzey ve eğri çizimi 
+
+x= -pi:2  % bu komutta -pi den 2 ye default artış oranı olan 1 ile varmak imkansızdır o yüzden sistem 2 ye en yakın sayıda işlemi keser ve hata mesajı vermez
+
+
+
+
+% senelerini harcadığın kız tüm emeklerini boşa attı ve tek yaptığın kendini daha çok kesmek oldu unutma bu anı

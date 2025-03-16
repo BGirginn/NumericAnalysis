@@ -61,10 +61,7 @@
 % title (x,y,"kelime"): belirtilen koordinata kelimeyi yazar
 % gtext("kelime"): grafikte fare ile seçilen yere kelimeyi yazdırır
 % compass (z): normalde sayıalr kartezyende çizilir. bu komut ile karmaşık sayılar kutupsalda çizilir
-% 
-% 
-% 
-% s
+%
 
 
 
