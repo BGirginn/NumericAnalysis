@@ -129,8 +129,31 @@ rez=[-0.5 -0.6145 1.5]; kok=[-4 1 7]; bolum=[1 2];  % burada bölüm neden 1 ve 
 % Üç boyutlu yüzey ve eğri çizimi 
 
 x= -pi:2  % bu komutta -pi den 2 ye default artış oranı olan 1 ile varmak imkansızdır o yüzden sistem 2 ye en yakın sayıda işlemi keser ve hata mesajı vermez
+y=0:0.2:1;
+
+[X,Y]=meshgrid(x,y)  % bu komut x ve y vektörlerini X ve Y matrisine dönüştürerek ızgara şeklinde çizim yüzeyi meydana getirir. 
+% x matrisin satır y ise sütun sayısını belirler. X de satırlar Y de ise sütunlar aynı olur
+% x, n boyutlu y ise m boyutlu olduğu varsayılarak matris m*n boyutundadır
+
+
+
+% FUNCTION
+
+function y = alanbul(z)  % data from outside will come in variable z
+    y=pi*z.^2
+end
+% we wrote the funcs command and them we need call the unc for use
+
+r=5;
+alanbul(r);
+disp(alanbul(r));  % example
+
+% çok saçma bir kullanım ama temeli şu şekilde çalışıyor:
+% ilk olarak function y = call name(kullanılacak değişken adı)
+% ikinci olarak içine y= diyip denklem veya script ne olacaksa onu yazıyorsun sonra da alt satıra end diyorsun
+% func u kullanmak için önce değişken adı=değer sonra callname(değişken adı) nı kullanıyorsun 
+% kalanı için de üstteki örneğe bak 
 
 
 
 
-% senelerini harcadığın kız tüm emeklerini boşa attı ve tek yaptığın kendini daha çok kesmek oldu unutma bu anı
