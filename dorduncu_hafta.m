@@ -157,3 +157,29 @@ disp(alanbul(r));  % example
 
 
 
+% 4.Hafta - 3. Ders
+
+% Maks min değer bulma
+
+% max(x): eğer x bir vektör ise içindeki en büyük elemanı bulur. Eğer matris ise her sütundaki en büyük elemanı bulur
+% [a b] = max(c): c bir vektör ise önce en büyük değeri a nın içine atanır ardından bu değerin indisi de b değişkenine atanır
+% max(a,b): a ve b matirisindeki elemanlardan aynı lokasyondakiler sıra ile karşılaştırılıp yeni bir matrise atanır. a ve b aynı boyutlarda olmalıdır
+% !!! Tüm komutlar min şekli için de aynı çalışma mantığı ile geçerlidir !!!
+% sum(x): eğer x bir vektör ise, x vektörünün elemanlarının toplamı yazılır. Eğer bir matris ise her sütunun toplamı ayrı ayrı yazılır
+
+a=[-1 4 8; 5 9 4; 3 4 9]
+(sum(a)  % burada -1 + 5 + 3=7,  4 + 9 + 4 = 17,  8 + 4 + 9 = 21  şeklinde yeni bir vektör oluşur
+sum(sum(a))  % yaparsan da bir vektörün tüm elemanlarının toplamını bulursun
+toplam=sum(3:3:15)  % 3den başla 15 e kadar 3 er artışla git ve topla 
+
+% factorial(a): komutu ile vektör ya da matrisdeki her elemanın ayrı ayrı faktöriyeli hesaplanır
+% factorial(1:5): 1 ve 3 dahil aralıktaki tüm sayıların faktöriyelini alır
+% factorial (1:3:15): 1 den 15 e kadar 15 dahil 3 er aralıklarla tüm sayıların faktöriyelini alır
+
+% prod(1:n): 1den n e kadar olan sayıları çarpar yani n! yapar
+% prod(1:3:10):  1 den 10 a kadar 3er sayıları çarpar  1*4*7*10=280
+
+% cumsum(k): k=[-4 7 12],  ans= -4 3 15  burada yapılan şey ilk eleman aynı kalır ardından sonraki ile toplayıp yazılır -4, -4+7, -4+7+12 şeklinde
+% eğer vektör değil matris ise bu işlemleri satır değil sütun şeklinde yapıp yeni bir sütuna ekler
+
+% cumprod(k): cumcum un aynı mantığı ancak toplama değil çarpma olarak yapıyor. kurallar hem vektör hem matris için geçerli 
