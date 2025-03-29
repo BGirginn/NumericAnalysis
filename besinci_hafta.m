@@ -18,3 +18,4 @@ w=z.*y  % y nin içinde 10 dan büyük olmayanlar için 0 büyükler için y dek
 
 % &: ve, |:veya, ~:değil anlamına gelen operatörlerdir
 % xor(x,y): x ve y aynı ise 1 farklı ise 0
+
